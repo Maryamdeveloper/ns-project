@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Redirect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .qr-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h2>Scan the QR Code to Continue</h2>
+        <div id="qrcode"></div>
+    </div>
+
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "login.html", // Redirects to the login page (replace with the actual filename)
+            width: 128,
+            height: 128
+        });
+    </script>
+</body>
+</html>
